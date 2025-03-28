@@ -2,23 +2,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // ======================
     // Active Navigation Highlighting
     // ======================
-    setTimeout(function() {
-        function setActiveNavLink() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (currentPage === linkPage) {
-                    link.classList.add('active');
-                }
-            });
-        }
-        setActiveNavLink();
-    }, 100); // 100 ms delay
+   
+    function setActiveNavLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (currentPage === linkPage) {
+                link.classList.add('active');
+            }
+        });
+    }
+    setActiveNavLink();
     // Run on page load and when navigating back/forward
     window.addEventListener('load', setActiveNavLink);
     window.addEventListener('popstate', setActiveNavLink);
