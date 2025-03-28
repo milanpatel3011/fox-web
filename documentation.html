@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fox-C is a powerful C++ utility library for mathematics, data structures, algorithms, and more. Simplify your coding with Fox-C's enhanced features.">
+    <meta name="keywords" content="C++ library, Fox-C, utility library, data structures, algorithms, C++ programming, mathematics functions">
+    <meta name="author" content="Milan Patel">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Fox-C Library - C++ Utility Library">
+    <meta property="og:description" content="Simplify your C++ coding with Fox-C's enhanced features for mathematics, data structures, and algorithms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fox-C Library - C++ Utility Library">
+    <meta name="twitter:description" content="Simplify your C++ coding with Fox-C's enhanced features for mathematics, data structures, and algorithms.">
+    <meta name="twitter:image" content="https://yourwebsite.com/images/twitter-card.jpg">
+    <title>Fox-C Library - Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Fox-C Logo" class="logo">
+                <h1><span class="fox">Fox</span>-<span class="c">C</span></h1>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container documentation">
+        <aside class="sidebar">
+            <h3>Documentation</h3>
+            <ul class="doc-menu">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#mathematics">Mathematics</a></li>
+                <li><a href="#matching">Conditional Matching</a></li>
+                <li><a href="#data-structures">Data Structures</a></li>
+                <li><a href="#looping">Looping Utilities</a></li>
+                <li><a href="#random">Randomization</a></li>
+                <li><a href="#sorting">Sorting</a></li>
+                <li><a href="#strings">String Utilities</a></li>
+                <li><a href="#performance">Performance Timing</a></li>
+                <li><a href="#memory">Memory Management</a></li>
+                <li><a href="#trie">Trie</a></li>
+                <li><a href="#union-find">Union-Find</a></li>
+                <li><a href="#license">License</a></li>
+            </ul>
+        </aside>
+
+        <div class="doc-content">
+            <section id="introduction">
+                <h2>Fox-C Library</h2>
+                <p>Fox-C is a custom C++ utility library designed to simplify coding with enhanced features for mathematics, data structures, algorithms, and more. The library provides user-friendly functions for quick and efficient development.</p>
+            </section>
+
+            <section id="installation">
+                <h2>Installation</h2>
+                <p>To use the Fox-C library, follow these steps:</p>
+                <div class="code-block">
+                    <code>sudo apt update</code>
+                    <code>sudo apt install libfoxc-dev</code>
+                </div>
+                <p>Include <code>foxC.h</code> in your C++ project:</p>
+                <div class="code-block">
+                    <code>#include "foxC.h"</code>
+                </div>
+                <p>For convenience, you can use:</p>
+                <div class="code-block">
+                    <code>using namespace foxc;</code>
+                </div>
+                <p>This allows you to call functions directly without <code>foxc::</code> prefix.</p>
+            </section>
+
+            <section id="usage">
+                <h2>Usage</h2>
+                <p>Include Fox-C in your C++ project by adding:</p>
+                <div class="code-block">
+                    <code>#include "foxC.h"</code>
+                    <code>using namespace foxc;</code>
+                </div>
+
+                <h3>Output Macros</h3>
+                <p>Fox-C provides two main functions to display output:</p>
+                <ul>
+                    <li><strong><code>run()</code></strong> → Outputs values without labels.</li>
+                    <li><strong><code>runxt()</code></strong> → Outputs values with custom labels.</li>
+                </ul>
+                <p>Example:</p>
+                <div class="code-block">
+                    <code>run("Hello, World!");</code>
+                    <code>runxt("Factorial of 5 is: ", fact(5));</code>
+                </div>
+            </section>
+
+            <section id="mathematics">
+                <h2>1. Mathematical Functions</h2>
+                <div class="code-block">
+                    <code>runxt("Factorial(n): ", fact(n));</code>
+                    <code>runxt("Fibonacci(n): ", fib(n));</code>
+                    <code>runxt("Power(n^m): ", power(n, m));</code>
+                    <code>runxt("Fast Power(n^m): ", fast_power(n, m));</code>
+                    <code>runxt("GCD(n, m): ", gcd(n, m));</code>
+                    <code>runxt("LCM(n, m): ", lcm(n, m));</code>
+                    <code>runxt("Is Prime(n): ", (is_prime(n) ? "Yes" : "No"));</code>
+                    <code>runxt("Sum of Digits(n): ", sum_of_digits(n));</code>
+                </div>
+            </section>
+
+            <section id="matching">
+                <h2>2. Conditional Matching</h2>
+                <div class="code-block">
+                    <code>match(n);           // Matches positive integer</code>
+                    <code>match(-n);          // Matches negative integer</code>
+                    <code>match("hello");     // Matches alphabetic string</code>
+                    <code>match(true);        // Matches boolean</code>
+                    <code>match('#');         // Matches special character</code>
+                </div>
+            </section>
+
+            <section id="data-structures">
+                <h2>3. Data Structures</h2>
+                
+                <h3>Stack</h3>
+                <div class="code-block">
+                    <code>Stack&lt;int&gt; stack;</code>
+                    <code>stack.push(n);</code>
+                    <code>stack.push(n+1);</code>
+                    <code>stack.push(n+2);</code>
+                    <code>stack.print();</code>
+                    <code>stack.pop();</code>
+                    <code>stack.print();</code>
+                </div>
+
+                <h3>Queue</h3>
+                <div class="code-block">
+                    <code>Queue&lt;int&gt; queue;</code>
+                    <code>queue.enqueue(n);</code>
+                    <code>queue.enqueue(n+5);</code>
+                    <code>queue.enqueue(n+10);</code>
+                    <code>queue.print();</code>
+                    <code>queue.dequeue();</code>
+                    <code>queue.print();</code>
+                </div>
+
+                <h3>Linked List</h3>
+                <div class="code-block">
+                    <code>LinkedList&lt;int&gt; list;</code>
+                    <code>list.append(n);</code>
+                    <code>list.append(n+1);</code>
+                    <code>list.append(n+2);</code>
+                    <code>list.print();</code>
+                    <code>list.deleteNode(n+1);</code>
+                    <code>list.print();</code>
+                </div>
+
+                <h3>Binary Search Tree</h3>
+                <div class="code-block">
+                    <code>BinarySearchTree&lt;int&gt; bst;</code>
+                    <code>bst.insert(n);</code>
+                    <code>bst.insert(n+10);</code>
+                    <code>bst.insert(n-5);</code>
+                    <code>bst.inorder();</code>
+                </div>
+            </section>
+
+            <section id="looping">
+                <h2>4. Looping Simplifications</h2>
+                <div class="code-block">
+                    <code>fl(1, n) {</code>
+                    <code>    run(i, " ");</code>
+                    <code>}</code>
+                    <code>fl(n, 1) {</code>
+                    <code>    run(i, " ");</code>
+                    <code>}</code>
+                </div>
+            </section>
+
+            <section id="random">
+                <h2>6. Random Number Generation</h2>
+                <div class="code-block">
+                    <code>runxt("Random number between 1 and n: ", randomInt(1, n));</code>
+                </div>
+            </section>
+
+            <section id="sorting">
+                <h2>7. Sorting Algorithms</h2>
+                <div class="code-block">
+                    <code>std::vector&lt;int&gt; arr = {n, n-2, n+3, n+1, n-1};</code>
+                    <code>mergeSort(arr, 0, arr.size() - 1);</code>
+                    <code>printArray(arr);</code>
+                </div>
+            </section>
+
+            <section id="strings">
+                <h2>8. String Utilities</h2>
+                <div class="code-block">
+                    <code>std::string trimmedStr = foxc::trim("  Hello, world!  ");</code>
+                    <code>runxt("Trimmed String: ", trimmedStr);</code>
+                    <code></code>
+                    <code>std::vector&lt;std::string&gt; words = foxc::split("apple,orange,banana", ',');</code>
+                    <code>for (const auto& word : words) run(word, " ");</code>
+                </div>
+            </section>
+
+            <section id="performance">
+                <h2>9. Timer Utility</h2>
+                <div class="code-block">
+                    <code>foxc::Timer timer;</code>
+                    <code>fl(0, n) {</code>
+                    <code>    int temp = 0;</code>
+                    <code>    temp += i;</code>
+                    <code>}</code>
+                    <code>runxt("Elapsed Time: ", timer.elapsed(), " seconds");</code>
+                </div>
+            </section>
+
+            <section id="memory">
+                <h2>10. Garbage Collection and Memory Management</h2>
+                <p>Fox-C ensures efficient memory management by:</p>
+                <ul>
+                    <li><strong>Automatic Cleanup</strong>: Data structures like <code>Stack</code>, <code>Queue</code>, and <code>LinkedList</code> automatically deallocate memory upon destruction.</li>
+                    <li><strong>Smart Pointers</strong>: Internally, smart pointers are used where necessary to avoid memory leaks.</li>
+                    <li><strong>Explicit <code>clear()</code> Method</strong>: Manually free memory when needed.</li>
+                </ul>
+                <p>Example:</p>
+                <div class="code-block">
+                    <code>stack.clear(); // Frees memory used by the stack</code>
+                    <code>queue.clear();</code>
+                    <code>list.clear();</code>
+                </div>
+            </section>
+
+            <section id="trie">
+                <h2>10. Trie Data Structure</h2>
+                <div class="code-block">
+                    <code>foxc::Trie trie;</code>
+                    <code>trie.insert("hello");</code>
+                    <code>trie.insert("world");</code>
+                    <code>runxt(trie.search("hello") ? "Found 'hello'" : "'hello' not found");</code>
+                </div>
+            </section>
+
+            <section id="union-find">
+                <h2>11. Union-Find Algorithm</h2>
+                <div class="code-block">
+                    <code>foxc::UnionFind uf(n);</code>
+                    <code>uf.unite(0, 1);</code>
+                    <code>uf.unite(1, 2);</code>
+                    <code>runxt(uf.find(0) == uf.find(2) ? "0 and 2 are connected" : "0 and 2 are not connected");</code>
+                </div>
+            </section>
+
+            <section id="license">
+                <h2>License</h2>
+                <p>Fox-C is an open-source project under the <strong>MIT License</strong>. Feel free to contribute and improve the library.</p>
+                <p>For questions or contributions, contact <strong>Milan Patel</strong> at <strong>milanrpatel30@gmail.com</strong>.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><span class="fox">Fox</span>-<span class="c">C</span></h3>
+                    <p>C++ Utility Library for Faster Development</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Milan Patel</p>
+                    <p>milanrpatel30@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fox-C Library. MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
